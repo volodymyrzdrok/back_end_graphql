@@ -6,8 +6,9 @@ const PORT = 4000;
 const mongoose = require("mongoose");
 const cors = require("cors");
 
-const URL_MONGO =
-  "mongodb+srv://test_user:20031111@cluster0.q7egu.mongodb.net/chat_test?retryWrites=true&w=majority";
+require("dotenv").config();
+
+const URL_MONGO = process.env.URL_MONGO;
 
 const options = {
   useNewUrlParser: true,
