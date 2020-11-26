@@ -2,13 +2,13 @@ const express = require("express");
 const { graphqlHTTP } = require("express-graphql");
 const schema = require("./schema");
 const app = express();
-const PORT = 4000;
 const mongoose = require("mongoose");
 const cors = require("cors");
 
 require("dotenv").config();
 
 const URL_MONGO = process.env.URL_MONGO;
+const PORT = process.env.PORT || 4000;
 
 const options = {
   useNewUrlParser: true,
